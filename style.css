@@ -1,0 +1,42 @@
+
+
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1140px;
+  box-sizing: border-box;
+  display: flex;
+
+}
+
+.flex-container{
+    justify-content: space-around;
+}
+
+textarea {
+
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none; 
+    overflow: hidden;
+
+}
+
+
+
+
+.twitterButton {
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: #40C4FF;
+    background-color: #40C4FF;
+    width: 300px;
+    height: 30px;
+    color: white;
+    font-weight: 800;
+   
+  }
