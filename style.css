@@ -1,6 +1,7 @@
 body {
   margin: 0;
   background-color:#e6ecf0;
+  font-family: Montserrat;
 }
 
 .container {
@@ -10,6 +11,48 @@ body {
   margin-right: auto;
   margin-left: auto;
   max-width: 1140px;
+    
+}
+
+.box-white{
+width: 40%;
+height: 40%;
+border-radius: 5px;
+display: flex;
+justify-content: space-between;
+flex-direction: column;
+margin-top: 65px;
+
+}
+
+.box{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  flex-direction: column;
+}
+
+.box-resp p 
+{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: 10px;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 5px;
+padding: 2%;
+
+}
+main {
+  display: flex;
+  
+}
+
+.flex-main {
+  display: flex;
+  justify-content: space-around;
 }
 
 .navbar {
@@ -25,16 +68,21 @@ body {
   color: #ffffff !important;
  }
 
-
+.bg-white{
+  background: #fff!important;
+}
 
 
 .text-uppercase {
   text-transform: uppercase !important;
 }
 
-
+.bold{
+  font-weight: 900;
+}
 .text-center {
   text-align: center !important;
+  
 }
 
 h1 {
@@ -47,10 +95,14 @@ textarea {
   border: 1px solid #80ffff;
   resize: none;
   overflow: hidden;
+  margin-top: 10px;
 
 }
 
-
+main {
+  display: flex;
+  justify-content: center;
+}
 
 
 .twitterButton {

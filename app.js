@@ -1,11 +1,12 @@
 function myFunction() {
     let now = new Date;
-    let datestring = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds() + " - " + now.getDay() + "/" + now.getMonth() + "/" + now.getFullYear();
+    let datestring = now.getHours() + ":" + now.getMinutes();
     let textTwitte = document.getElementById("myTextarea").value;
     let newParagraph = document.createElement("p");
-    newParagraph.innerHTML = datestring + '</br>' + textTwitte;
+    newParagraph.innerHTML = textTwitte + '</br>' +'</br>'+ datestring.bold()+'</br>';
     var container = document.getElementById('childContainer');
     container.appendChild(newParagraph);
+  
 }
 
 let btnTwitte = document.getElementById('btnTwitte');
