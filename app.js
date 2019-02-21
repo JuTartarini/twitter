@@ -1,65 +1,47 @@
 function myFunction() {
-    
-    
+    let now = new Date;
+    let datestring = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds() + " - " + now.getDay() + "/" + now.getMonth() + "/" + now.getFullYear();
     let textTwitte = document.getElementById("myTextarea").value;
-    let paragrafo = document.getElementById("paragrafo").innerHTML;
-    paragrafo = paragrafo + "<p>" + textTwitte + "</p>";
-    document.getElementById("paragrafo").innerHTML = paragrafo;
-
-
+    let newParagraph = document.createElement("p");
+    newParagraph.innerHTML = datestring + '</br>' + textTwitte;
+    var container = document.getElementById('childContainer');
+    container.appendChild(newParagraph);
 }
 
-let btnTwitte =document.getElementById('btnTwitte');
-btnTwitte.addEventListener('click',myFunction);
-let textTwitte =document.getElementById('myTextarea');
-textTwitte.addEventListener('keyup',shelly);
+let btnTwitte = document.getElementById('btnTwitte');
+btnTwitte.addEventListener('click', myFunction);
+let textTwitte = document.getElementById('myTextarea');
+textTwitte.addEventListener('keyup', shelly);
+textTwitte.addEventListener('keydown', autoSize);
 
-let quantCaracter = 140;
+const quantCaracter = 140;
 let count = document.getElementById("count");
 count.innerHTML = quantCaracter;
 
-
-function enableButton(condicional)
-{
-    //let textTwitte = document.getElementById("myTextarea").value;
-    //if (textTwitte != "" )
-    //{
-        btnTwitte.disabled = condicional;
-    //}
+function enableButton(condicional) {
+    btnTwitte.disabled = condicional;
 }
 
-function getKey()
-{
-    let letter = event.key;
-    if (letter == 'Enter' || textTwitte.scrollHeight > textTwitte.offsetHeight -1) moreRows();
-    lengthTextTwitte = textTwitte.value.length;
-    if(lengthTextTwitte > 0) enableButton(false);
-    //if(lengthTextTwitte > 119) trocar cor
-    //if(lengthTextTwitte > 129) trocar cor
-    if(lengthTextTwitte > 140) enableButton(true);
-
+function getKey() {
+    let lengthTextTwitte = textTwitte.value.length;
     count.innerHTML = quantCaracter - lengthTextTwitte;
-    
-
-    if(lengthTextTwitte > 140) {
-        enableButton(true);
+    if (lengthTextTwitte > 0) {
+        enableButton(false);
+        count.style.color = '#000000';
     }
-    
-    lengthTextTwitte = textTwitte.value.length;
-    
-
+    if (lengthTextTwitte >= 120) count.style.color = '#fff666';
+    if (lengthTextTwitte >= 130) count.style.color = '#ff0000';
+    if (lengthTextTwitte > 140) enableButton(true);
 }
 
-function moreRows()
-{
-    textTwitte.rows += 1;
+function autoSize(sizeRows) {
+    setTimeout(function () {
+        textTwitte.style.cssText = 'height:auto; padding:0';
+        textTwitte.style.cssText = 'height:' + textTwitte.scrollHeight + 'px';
+    }, 0);
 }
 
-function shelly()
-{
+function shelly() {
     enableButton();
     getKey();
 }
-
-
-

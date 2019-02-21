@@ -1,5 +1,7 @@
-
-
+body {
+  margin: 0;
+  background-color:#e6ecf0;
+}
 
 .container {
   width: 100%;
@@ -8,21 +10,43 @@
   margin-right: auto;
   margin-left: auto;
   max-width: 1140px;
-  box-sizing: border-box;
-  display: flex;
-
 }
 
-.flex-container{
-    justify-content: space-around;
+.navbar {
+  border-top: 3px solid rgba(0, 0, 0, 0.25); 
+  border-bottom: 3px solid rgba(0, 0, 0, 0.25);
+  width: 100%;
+  padding: .5rem 1rem;
+  background-color: #1da1f2 !important;
+}
+
+
+.fa-twitter-white {
+  color: #ffffff !important;
+ }
+
+
+
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+
+.text-center {
+  text-align: center !important;
+}
+
+h1 {
+  margin: 0px;
 }
 
 textarea {
 
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    resize: none; 
-    overflow: hidden;
+  border-radius: 5px;
+  border: 1px solid #80ffff;
+  resize: none;
+  overflow: hidden;
 
 }
 
@@ -30,13 +54,18 @@ textarea {
 
 
 .twitterButton {
-    border: 1px solid;
-    border-radius: 5px;
-    border-color: #40C4FF;
-    background-color: #40C4FF;
-    width: 300px;
-    height: 30px;
-    color: white;
-    font-weight: 800;
-   
-  }
+  border-radius: 100px;
+  box-shadow: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #1da1f2;
+  border: 1px solid #1da1f2; 
+  color: #fff;
+
+}
